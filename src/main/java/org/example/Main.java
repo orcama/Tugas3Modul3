@@ -17,10 +17,8 @@ public class Main {
             }
 
             public static boolean Palindrome(String text) {
-                // Menghapus spasi
-                text = text.replaceAll("\\s", " ").toLowerCase();
-                // Menghapus tanda baca dan karakter selain huruf atau angka
-                text = text.replaceAll("[^a-zA-Z0-9]", " ");
+                // Menghapus spasi dan karakter non-alphanumeric
+                        text = text.replaceAll("\\s", "").replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
                 // Mengecek apakah kata atau kalimat tersebut adalah palindrome
                 int left = 0;
                 int right = text.length() - 1;
